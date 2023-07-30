@@ -3,10 +3,10 @@ module.exports = {
         es2021: true,
         node: true,
     },
+    plugins: ["import"],
     extends: [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "airbnb-base",
         "airbnb-typescript/base",
     ],
     parser: "@typescript-eslint/parser",
