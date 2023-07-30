@@ -8,7 +8,8 @@
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development  nodemon src/index.ts",
     "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "test": "cross-env NODE_ENV=testing jest index.ts"
   },
   "repository": {
     "type": "git",
@@ -21,14 +22,17 @@
   },
   "homepage": "https://github.com/YasserAmro0/ChatWorld_Express#readme",
   "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "eslint": "^8.46.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "husky": "^8.0.3",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
-    "@commitlint/cli": "^17.6.5",
-    "@commitlint/config-conventional": "^17.6.5"
+    "husky": "^8.0.3"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
